@@ -1,3 +1,13 @@
+''' 
+preprocess the .bib file 
+downloaded from DBLP https://dblp.uni-trier.de/
+
+output the corresponding .csv file 
+where each row: paper title, # of authors
+
+by Chengbin HOU 2019 @ Uni of Birmingham
+'''
+
 import bibtexparser
 # import re
 
@@ -18,7 +28,7 @@ def dict_to_txt(filename, my_dict):
             fout.write('\n')
 
 def main():
-    filename = 'TKDE15'
+    filename = 'TKDE15' # ------- modify file name here ----------
 
     with open(filename+str('.bib'),'r') as bibtex_file:
         bib_database = bibtexparser.load(bibtex_file)
